@@ -3,15 +3,15 @@
 
 void main()
 {
-	int row,col,completed;
-	char option;
-	int array[3][3]={{2,7,8},{1,3,5},{4,6,0}};
+  int row,col,completed;
+  char option;
+  int array[3][3]={{2,7,8},{1,3,5},{4,6,0}};
   printf("Initial Array");
-  printf(array);
+  print(array);
   printf("Let's Start");
   printf("Enter the Character in UpperCase Only\n");
-	printf("U for Up,D for Down,L for Left,R for right,Q to quit\n");
-	scanf("%c",&option); 
+  printf("U for Up,D for Down,L for Left,R for right,Q to quit\n");
+  scanf("%c",&option); 
   while(option != 'Q')
 	{	
 		
