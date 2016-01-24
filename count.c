@@ -2,11 +2,21 @@
 
 void main()
 {
-  int n,count;
+  int n,count = 0;
   scanf("%d",&n);
-  while(n > 0)
+  if(n==0)
   {
-   n=n/2;
-   ++count;
+    count = 1;
+    printf("The Number of bits required to print binary eqivalent of given number is %d",count);
   }
-  printf("The Number of bits required to print binary eqivalent of given number is %d",count);
+  else
+  {
+   while(n > 0)
+   {
+    n=n/2;
+    ++count;
+   }
+   printf("The Number of bits required to print binary eqivalent of given number is %d",count);
+  }
+}  
+  
