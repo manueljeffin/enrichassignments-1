@@ -1,0 +1,84 @@
+#include<stdio.h>
+
+void binary(int num)
+{
+  int mask = 32768;
+    while(mask>0)
+    {
+        if((num&mask)==0)
+        {
+            printf("0");
+        }
+        else
+        {
+            printf("1");
+        }
+        mask=mask>>1;
+    }
+    printf("\n");
+}  
+void bitset(int num, int bit)
+{
+    num = num|1<< bit;
+    printf("\nBit %d set to 1",bit);
+    printf("    ");
+    binary(num);
+}
+void bitunset(int num, int bit)
+{
+  num &= ~(1 << bit);
+  printf("\nBit %d unset to 0",bit);
+  printf("    ");
+  binary(num);
+}
+void bittog(int num,int bit)
+{
+    num=num^(1<<bit);
+    printf("\nBit %d toggled",bit);
+    printf("    ");
+    binary(num);
+}
+void bittogexceptn(int num,int bit)
+{
+    num=(~num)|(1<<bit);
+    printf("\nAfter toggling other than bit %d, bit);
+    printf("    ");
+    binary(num);
+}
+void leftrotate(int num)
+{
+    printf("\nAfter left rotate");
+    num=num<<1|num>>7;
+    printf("    ");
+    binary(num);
+}
+void rightrotate(int num)
+{
+    printf("\nAfter right rotate");
+    num=num>>1|num<<7;
+    printf("    ");
+    binary(num);
+}
+void swap(int num)
+{
+  (num & 0x0F)<<4 | (num & 0xF0)>>4 ;
+  printf("    ");
+  binary(num);
+}  
+void main()
+{
+  int num,n; 
+  printf("Enter Number");
+  scanf("%d",&num);
+  printf("Bit index");
+  scanf("%d", &n);
+  printf("\n Given Number   ");
+  binary(num);
+  bitset(num,n);
+  bitunset(num,n);
+  bittog(num,n);
+  bittogexceptn(num,n);
+  leftrotate(num);
+  rightrotate(num);
+  swap(num); 
+}  
