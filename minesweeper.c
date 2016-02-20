@@ -18,8 +18,8 @@ void main()
 		 		 		 int k,num=0,temp,endcol,endrow,startrow,l;
 		 		 		 temp = (j==0)? j:j-1;
 		 		 		 endcol = (j!=5)? j+1:j;
-		 		 		 startrow = (row==0)? row:row-1;
-		 		 		 endrow = (i==5)? row:row+1;
+		 		 		 startrow = (row==0)? i:i-1;
+		 		 		 endrow = (i==5)? i:i+1;
 		 		 		 for(k=startrow;k<=endrow;k++)
 		 		 		 {
 		 		 		 		for(l=temp;l<=endcol;l++)
@@ -42,7 +42,7 @@ void main()
 	{
 	  for(j=0;j<6;j++)
 	  {
-	    printf("%d",a[i][j]);
+	    printf("%d",arr[i][j]);
 	 }
   }
 }  
