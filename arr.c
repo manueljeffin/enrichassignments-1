@@ -34,11 +34,11 @@ int main(void)
  ans = inarray(a,m,v);
  if(ans == -1)
  {
-   printf("The value doesnt exist in the array");
+   printf(ans);
  }
  else
  {
-  printf("The index of given value is %d",ans);
+  printf("%d",ans);
  }
  return 0;
 } 
