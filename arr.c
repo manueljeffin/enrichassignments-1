@@ -33,7 +33,7 @@ int main(void)
  ans = inarray(a,m,v);
  if(ans == -1)
  {
-   printf(ans);
+   printf("%d",ans);
  }
  else
  {
