@@ -7,18 +7,17 @@ int inarray(int arr[],int size, int value)
   {
     if(arr[index]==value)
     {
-      flag = -2;
+      flag = index;
       break;
     }
+    else
+    {
+      flag = -1;
+    }
   }
-  if(flag == -2)
-  {
-   return index;
-  }
-  else
-  {
-    return flag;
-  }  
+  return flag;
+  
+  
 }
 
 int main(void)
