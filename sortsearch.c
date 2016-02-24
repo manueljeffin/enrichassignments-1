@@ -14,12 +14,12 @@ int main(void)
 	while (start<=end) 
 	{
 		middle = (start+end)/2;
-		if (arr[middle] == key)
+		if (arr[middle] == value)
 		{
 		  printf("%d",middle);
 			    
 		}
-		else if (arr[middle] < key) 
+		else if (arr[middle] < value) 
 		{
 			start = middle + 1;
 		}
