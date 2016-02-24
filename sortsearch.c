@@ -3,8 +3,9 @@
 int main(void)
 {
 
-  int arr[5],i,val,n,middle,start,end;
-  scanf("%d"&n);
+  int arr[5],i,val,n,middle,start = 0,end;
+  scanf("%d",&n);
+  end = n-1;
   for(i=0;i<n;i++)
   {
    scanf("%d",&arr[i]);
