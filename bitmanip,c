@@ -2,7 +2,8 @@
 
 void binary(int num)
 {
-  int mask = 32768;
+  int mask = 32768; //2^15
+  //to print the number as it is as a 16 bit form
     while(mask>0)
     {
         if((num&mask)==0)
@@ -40,7 +41,7 @@ void bittog(int num,int bit)
 }
 void bittogexceptn(int num,int bit)
 {
-    num=(~num)|(1<<bit);
+    num=(~num)|(1<<bit); 
     printf("\nAfter toggling other than bit %d, bit);
     printf("    ");
     binary(num);
@@ -48,20 +49,20 @@ void bittogexceptn(int num,int bit)
 void leftrotate(int num)
 {
     printf("\nAfter left rotate");
-    num=num<<1|num>>7;
+    num=num<<1|num>>7; left-right
     printf("    ");
     binary(num);
 }
 void rightrotate(int num)
 {
     printf("\nAfter right rotate");
-    num=num>>1|num<<7;
+    num=num>>1|num<<7; right-left
     printf("    ");
     binary(num);
 }
-void swap(int num)
+void swap(int num) //4 bits form a nibble
 {
-  (num & 0x0F)<<4 | (num & 0xF0)>>4 ;
+  (num & 0x0F)<<4 | (num & 0xF0)>>4 ;//brilliant,left-right
   printf("    ");
   binary(num);
 }  
